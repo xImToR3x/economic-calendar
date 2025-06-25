@@ -9,6 +9,7 @@ def all_events():
     url = "https://m.investing.com/economic-calendar/"
     headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X)"}
     res = requests.get(url, headers=headers)
+    print(response.text)
     soup = BeautifulSoup(res.text, "html.parser")
     
     events = []
